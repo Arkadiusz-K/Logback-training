@@ -1,0 +1,24 @@
+<configuration>
+    <property name="HOME_LOG" value="warning.log"/>
+    <appender name="WARNING" class="ch.qos.logback.core.FileAppender">
+        <file>${HOME_LOG}</file>
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <property name="HOME_LOG2" value="error.log"/>
+    <appender name="ERROR" class="ch.qos.logback.core.FileAppender">
+        <file>${HOME_LOG2}</file>
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="WARNING" />
+    </root>
+    <root level="error">
+        <appender-ref ref="ERROR"/>
+    </root>
+</configuration>

@@ -1,0 +1,3 @@
+ERROR Logback-training.src.main.java.Main - Error message
+WARN com.logback-training - Warning is enabled
+TRACE com - Now trace is enabled
